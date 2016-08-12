@@ -1,4 +1,12 @@
-# Comment bien organiser son projet Angular
+#  Projet Angular for GOT Personnages
+Style Guide Angular
+https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
+
+#  Arborescence
+
++ local: all assets of project
++ source: all code
+
 
 ## Les outils
 

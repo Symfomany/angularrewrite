@@ -9,15 +9,13 @@
         var vm = this;
 
         // Attributes
-        vm.title = 'Bienvenue sur mon blog';
-        vm.news = [];
-
+        vm.personnages = [];
         fetchDatas(data);
 
         ///////////////
 
         function fetchDatas(data) {
-            vm.news = data;
+            vm.personnages = data;
         }
     }
 })();

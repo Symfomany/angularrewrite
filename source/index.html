@@ -2,16 +2,18 @@
 <html ng-app="Blog">
     <head>
         <meta charset="utf-8" />
-
         <base href="/" />
 
         <!-- css:css -->
         <!-- endinject -->
 
-        <title>Blog</title>
+        <title>Personnage de Game Of Throne</title>
     </head>
 
+    <!-- Alias Controller: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#controllers -->
     <body ng-controller="MainController as main">
+
+        <!-- Partial is a directory generate by Gulp in my htmlTask() -->
         <ng-include src="'/partials/_head.html'"></ng-include>
 
         <main id="main-container" ng-view></main>

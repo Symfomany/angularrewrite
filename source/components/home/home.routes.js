@@ -9,20 +9,20 @@
         var langPath = '/resources/locale-' + config.defaultLocation + '.json';
 
         $routeProvider
-            .when('/', {
-                controller: 'HomeController',
-                controllerAs: 'homeVm',
-                templateUrl: 'partials/_home.html',
+            .when('/', { //route main
+                controller: 'HomeController', // name of Conroller
+                controllerAs: 'homeVm', // alias for controller
+                templateUrl: 'partials/_home.html', //template to call
                 resolve: {
-                    loadLang: localeResolverProvider.resolve(langPath),
-                    data: ['$q', '$sce', 'news', getDataHome]
+                    loadLang: localeResolverProvider.resolve(langPath), // load language
+                    data: ['$q', 'personnage', getDataHome]
                 }
             })
             .otherwise({redirectTo: '/'});
 
         ///////////////
 
-        function getDataHome($q, $sce, news) {
+        function getDataHome($q, personnage) {
             var defer = $q.defer();
 
             resolve();
@@ -32,7 +32,7 @@
             ///////////////
 
             function resolve() {
-                news
+                personnage
                     .get()
                     .then(function(data) {
                         defer.resolve(data);

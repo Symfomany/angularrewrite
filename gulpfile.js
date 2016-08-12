@@ -1,9 +1,9 @@
 //Gulp modules
 var gulp = require('gulp'),
-	connect = require('gulp-connect'),
+		connect = require('gulp-connect'),
     history = require('connect-history-api-fallback'),
-	open = require('gulp-open'),
-	sass = require('gulp-sass'),
+		open = require('gulp-open'),
+		sass = require('gulp-sass'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     jsonminify = require('gulp-jsonminify'),
@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 var environment = 'local', //(local|dev|prod)
 	bowerFolder = 'source/bower_components'
 	host = 'localhost',
-	port = '8080';
+	port = '3000';
 
 //Datas
 var htmlFiles = [
@@ -147,9 +147,12 @@ function bowerTask() {
 		bowerFolder + '/angular/angular.min.js',
 		bowerFolder + '/angular-route/angular-route.min.js',
 		bowerFolder + '/angular/angular.min.js.map',
-		bowerFolder + '/angular-route/angular-route.min.js.map'
+		bowerFolder + '/angular-animate/angular-animate.min.js',
+		bowerFolder + '/angular-aria/angular-aria.min.js',
+		bowerFolder + '/angular-messages/angular-messages.min.js',
+		bowerFolder + '/angular-material/angular-material.min.js',
 	];
-
+  // store in vendor
 	return gulp
 		.src(bowerComponents)
 		.pipe(gulp.dest(environment + '/vendor'));

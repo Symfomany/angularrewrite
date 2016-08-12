@@ -13,7 +13,6 @@
         vm.currentRoute = '';
 
         // Events
-
         $rootScope.$on('$routeChangeSuccess', routeChangeSuccess);
 
         ///////////////
